@@ -1,4 +1,4 @@
- Exploratory Data Analysis (EDA) of Superstore Dataset using Julius AI 
+## Exploratory Data Analysis (EDA) of Superstore Dataset using Julius AI 
 Prompt Used: Determine which regions (e.g., West vs. Central) are most profitable and identify top/bottom-performing products.
 # Load Superstore data, inspect, and compute profitability by region and product
 import pandas as pd
