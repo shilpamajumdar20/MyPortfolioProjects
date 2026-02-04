@@ -16,12 +16,14 @@ print(profit_by_region)
 ## Profit by product (Product Name)
 profit_by_product = superstore_df.groupby('Product Name', as_index=False)['Profit'].sum()
 
-# Top 10 and bottom 10 products by total profit
+## Top 10 and bottom 10 products by total profit
 top_products = profit_by_product.sort_values('Profit', ascending=False).head(10)
 bottom_products = profit_by_product.sort_values('Profit', ascending=True).head(10)
 
 print(top_products)
 print(bottom_products)
+
+
  This code snippet loads Superstore data, calculates total profit by region and product, and identifies the top and bottom 10 products based on profit.
 - Load Superstore data from a CSV file
 - Group data by region and sum profits, sorting in descending order
