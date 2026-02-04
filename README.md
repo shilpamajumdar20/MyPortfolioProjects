@@ -1,19 +1,19 @@
-## Exploratory Data Analysis (EDA) of Superstore Dataset using Julius AI 
+# Exploratory Data Analysis (EDA) of Superstore Dataset using Julius AI 
 Prompt Used: Determine which regions (e.g., West vs. Central) are most profitable and identify top/bottom-performing products.
-# Load Superstore data, inspect, and compute profitability by region and product
+## Load Superstore data, inspect, and compute profitability by region and product
 import pandas as pd
 from tqdm import tqdm
 
-# Read CSV
+## Read CSV
 superstore_df = pd.read_csv('Sample - Superstore.csv', encoding='ISO-8859-1')
 
 print(superstore_df.head())
 
-# Profit by region
+## Profit by region
 profit_by_region = superstore_df.groupby('Region', as_index=False)['Profit'].sum().sort_values('Profit', ascending=False)
 print(profit_by_region)
 
-# Profit by product (Product Name)
+## Profit by product (Product Name)
 profit_by_product = superstore_df.groupby('Product Name', as_index=False)['Profit'].sum()
 
 # Top 10 and bottom 10 products by total profit
